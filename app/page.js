@@ -1,5 +1,5 @@
 import Image from "next/image";
-import The_Seasons from "next/font/local";
+import CustomFont from "next/font/local";
 import { Yeseva_One } from "next/font/google";
 
 const yesevaOne = Yeseva_One({
@@ -7,9 +7,13 @@ const yesevaOne = Yeseva_One({
   subsets: ["latin"],
 });
 
-const theSeasons = The_Seasons({
+const theSeasons = CustomFont({
   src: "/The_Seasons.otf",
 });
+
+const tt_commons_pro = CustomFont({
+  src: "/tt_commons_pro_condensed_regular.otf"
+})
 
 export default function Home() {
   return (
@@ -38,8 +42,8 @@ export default function Home() {
             <h1>Launching</h1>
             <h1>Soon</h1>
           </div>
-          <div className="text-[#fff3e4] w-full lg:w-1/3 text-center text-xs md:text-lg">
-            <p className="mx-8">
+          <div className="text-[#fff3e4] w-full lg:w-1/2 text-center text-2xl">
+            <p className={`${tt_commons_pro.className} mx-8`}>
               Redefining global dinnerware with the strength of nature and the
               spirit of sustainability. A new chapter by Parashakthi Industries
             </p>
@@ -47,9 +51,9 @@ export default function Home() {
           <div className="text-center flex justify-center">
             <input
               placeholder="jhon@example.com"
-              className="text-xs md:text-lg md:px-8 bg-[#fff3e4] outline-none px-4 py-2 text-[#694a38]"
+              className="text-sm md:text-lg md:px-8 bg-[#fff3e4] outline-none px-4 py-2 text-[#694a38]"
             ></input>
-            <button className="text-xs md:text-lg px-2 md:px-8 bg-[#694a38] text-[#fff3e4]">
+            <button className="text-sm md:text-lg px-2 md:px-8 bg-[#694a38] text-[#fff3e4]">
               Notify Me
             </button>
           </div>
