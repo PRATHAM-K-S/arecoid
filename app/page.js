@@ -45,7 +45,7 @@ export default function Home() {
           <div className="text-[#fff3e4] w-full lg:w-1/2 text-center text-2xl">
             <p className={`${tt_commons_pro.className} mx-8`}>
               Redefining global dinnerware with the strength of nature and the
-              spirit of sustainability. A new chapter by Parashakthi Industries
+              spirit of sustainability. A new chapter by Parashakthi  Industries
             </p>
           </div>
           <div className="text-center flex justify-center">
