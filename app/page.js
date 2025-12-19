@@ -42,7 +42,7 @@ export default function Home() {
             <h1>Launching</h1>
             <h1>Soon</h1>
           </div>
-          <div className="text-[#fff3e4] w-full lg:w-1/2 text-center text-2xl">
+          <div className="text-[#fff3e4] w-full lg:w-1/2 text-center text-lg md:text-2xl">
             <p className={`${tt_commons_pro.className} mx-8`}>
               Redefining global dinnerware with the strength of nature and the
               spirit of sustainability. A new chapter by Parashakthi  Industries
