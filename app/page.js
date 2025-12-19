@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <div className="text-center flex justify-center">
             <input
-              placeholder="Enter email address"
+              placeholder="Enter your email address"
               className="text-sm md:text-lg md:px-8 bg-[#fff3e4] outline-none px-4 py-2 text-[#694a38]"
             ></input>
             <button className="text-sm md:text-lg px-2 md:px-8 bg-[#694a38] text-[#fff3e4]">
