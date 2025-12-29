@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-arecoidPrimary: #fff3e4;
+  --color-arecoidGreen: #3a7d1d;
+  --color-arecoidBrown: #694a38;
+}
