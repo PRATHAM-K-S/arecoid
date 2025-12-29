@@ -19,6 +19,7 @@ export default function Hero() {
           src="/hero/heroImg.png"
           alt="Hero Image"
           fill
+          priority
           className="object-cover rounded-lg"
         />
       </div>
