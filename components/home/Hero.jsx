@@ -13,11 +13,11 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function Hero() {
   return (
-    <section className="mx-6 flex flex-col gap-8 py-4">
-      <div className="relative aspect-square">
+    <section className="mx-6 flex flex-col md:mx-8 xl:flex-row-reverse xl:items-center xl:mx-16 gap-8 py-4 xl:py-16">
+      <div className="relative aspect-square xl:w-3/4">
         <Image
           src="/hero/heroImg.png"
-          alt="Hero Image"
+          alt="areca leaf dinnerware"
           fill
           priority
           className="object-cover rounded-lg"
@@ -25,12 +25,12 @@ export default function Hero() {
       </div>
       <div className="flex flex-col gap-4 items-start">
         <h1
-          className={`${leagueSpartan.className} text-4xl leading-11 font-bold text-arecoidGreen`}
+          className={`${leagueSpartan.className} text-4xl leading-11 md:text-[44px] md:leading-13 xl:text-[52px] xl:leading-16 font-bold text-arecoidGreen`}
         >
           Sustainable Areca Leaf Dinnerware Manufacturer from India
         </h1>
         <p
-          className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown`}
+          className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown xl:w-3/4`}
         >
           Arecoid, a unit of Parashakthi Industries, specializes in eco-friendly
           areca leaf dinnerware for export and domestic markets.
