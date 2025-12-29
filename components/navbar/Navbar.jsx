@@ -19,7 +19,7 @@ export default function Navbar() {
         />
       </span>
       <div
-        className={`${atkinsonHyperlegible.className} hidden xl:flex text-arecoidBrown text-[16px] gap-1`}
+        className={`${atkinsonHyperlegible.className} hidden xl:flex text-arecoidBrown text-lg gap-1`}
       >
         <Link href={"/"} className="px-2.5 py-3">
           Home
@@ -44,11 +44,6 @@ export default function Navbar() {
           width={24}
           height={24}
         />
-      </button>
-      <button
-        className={`${atkinsonHyperlegible.className} hidden text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg xl:block`}
-      >
-        Export enquires
       </button>
     </nav>
   );
