@@ -61,7 +61,7 @@ export default function ProductRange() {
   };
 
   return (
-    <section className="mx-6 py-16 flex flex-col gap-8 sm:mx-8 xl:mx-16">
+    <section className="mx-6 pt-16 flex flex-col gap-8 sm:mx-8 xl:mx-16">
       <h2
         className={`${leagueSpartan.className} text-arecoidGreen font-bold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
       >
@@ -108,7 +108,7 @@ export default function ProductRange() {
         {showLeftBtn && (
           <button
             onClick={() => scrollHorizontally("left")}
-            className="bg-white p-3 flex justify-center items-center rounded-full absolute top-1/3 -translate-y-1/2 -left-4 mt-4 z-30 shadow-md transition-all duration-300 cursor-pointer"
+            className="bg-white p-3 flex justify-center items-center rounded-full absolute top-1/3 -translate-y-1/2 -left-4 mt-4 z-5 shadow-md transition-all duration-300 cursor-pointer"
           >
             <Image
               src={"/productRange/left-arrow.png"}
@@ -124,7 +124,7 @@ export default function ProductRange() {
         {showRightBtn && (
           <button
             onClick={() => scrollHorizontally("right")}
-            className="bg-white p-3 flex justify-center items-center rounded-full absolute top-1/3 -translate-y-1/2 -right-4 mt-4 z-30 shadow-md transition-all duration-300 cursor-pointer"
+            className="bg-white p-3 flex justify-center items-center rounded-full absolute top-1/3 -translate-y-1/2 -right-4 mt-4 z-5 shadow-md transition-all duration-300 cursor-pointer"
           >
             <Image
               src={"/productRange/right-arrow.png"}
