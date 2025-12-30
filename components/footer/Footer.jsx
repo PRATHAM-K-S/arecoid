@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="px-6 md:px-8 xl:px-16 py-10 xl:py-16 bg-arecoidCream">
       <div className="flex flex-col xl:flex-row xl:justify-between gap-10">
         <div className="flex flex-col">
-          <span className="flex py-3">
+          <span className="flex pb-2">
             <Image
               src="/nav/arecoid_logo.png"
               alt="Arecoid Logo"
