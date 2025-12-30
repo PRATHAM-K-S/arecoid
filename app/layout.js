@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "Arecoid",
-  description: "Launching soon website for arecoid",
+  description:
+    "Sustainable Areca Leaf Dinnerware Manufacturer from India.Arecoid, a unit of Parashakthi Industries, specializes in eco-friendly areca leaf dinnerware for export and domestic markets.",
 };
 
 export default function RootLayout({ children }) {
