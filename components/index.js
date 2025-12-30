@@ -5,3 +5,4 @@ export {default as ProductRange} from './home/ProductRange';
 export {default as ProductCard} from './comps/ProductCard';
 export {default as Manufacturing} from './home/Manufacturing';
 export {default as ExportQuote} from './home/ExportQuote';
+export {default as Footer} from './footer/Footer';
