@@ -13,11 +13,11 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 export default function ExportQuote() {
   return (
     <section className="mx-6 py-16 flex flex-col sm:mx-8 sm:w-3/4 xl:mx-16 xl:w-1/2 gap-4">
-      <h1
+      <h2
         className={`${leagueSpartan.className} text-4xl leading-11 md:text-[44px] md:leading-13 xl:text-[52px] xl:leading-16 font-bold text-arecoidGreen`}
       >
         Looking for a Reliable Areca Leaf Dinnerware Exporter?
-      </h1>
+      </h2>
       <ul
         className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown xl:w-3/4 list-disc list-inside flex flex-col sm:flex-row gap-4`}
       >
