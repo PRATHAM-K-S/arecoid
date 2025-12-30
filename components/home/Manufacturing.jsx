@@ -1,14 +1,9 @@
-import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import Image from "next/image";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const atkinsonHyperlegible = Atkinson_Hyperlegible({
-  subsets: ["latin"],
-  weight: ["400", "700"],
 });
 
 export default function Manufacturing() {
