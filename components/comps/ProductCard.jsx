@@ -30,7 +30,7 @@ export default function ProductCard({src,alt,title,description,href}) {
         >
           {title}
         </h3>
-        <p className={`${atkinsonHyperlegible.className} text-sm leading-3.5`}>
+        <p className={`${atkinsonHyperlegible.className} text-sm leading-3.5 text-arecoidBrown`}>
           {description}
         </p>
         <Link
