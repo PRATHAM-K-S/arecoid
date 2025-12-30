@@ -16,6 +16,7 @@ export default function Navbar() {
           alt="Arecoid Logo"
           width={105.12}
           height={100}
+          priority
         />
       </span>
       <div
@@ -43,6 +44,7 @@ export default function Navbar() {
           alt="Arecoid Logo"
           width={24}
           height={24}
+          priority
         />
       </button>
     </nav>

@@ -25,10 +25,10 @@ export default function ProductRange() {
   const checkScrollPosition = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      
+
       // Show left button if we've scrolled away from the start
       setShowLeftBtn(scrollLeft > 10);
-      
+
       // Show right button if we haven't reached the end (with 10px buffer)
       setShowRightBtn(scrollLeft + clientWidth < scrollWidth - 10);
     }
@@ -39,7 +39,7 @@ export default function ProductRange() {
     if (currentRef) {
       // Check on initial load
       checkScrollPosition();
-      
+
       // Add event listener for manual scrolling/swiping
       currentRef.addEventListener("scroll", checkScrollPosition);
       // Check on window resize in case the layout changes
@@ -47,7 +47,8 @@ export default function ProductRange() {
     }
 
     return () => {
-      if (currentRef) currentRef.removeEventListener("scroll", checkScrollPosition);
+      if (currentRef)
+        currentRef.removeEventListener("scroll", checkScrollPosition);
       window.removeEventListener("resize", checkScrollPosition);
     };
   }, []);
@@ -114,6 +115,7 @@ export default function ProductRange() {
               alt="left arrow"
               width={24}
               height={24}
+              priority
             />
           </button>
         )}
@@ -129,6 +131,7 @@ export default function ProductRange() {
               alt="right arrow"
               width={24}
               height={24}
+              priority
             />
           </button>
         )}

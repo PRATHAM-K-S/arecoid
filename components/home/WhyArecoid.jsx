@@ -27,6 +27,7 @@ export default function WhyArecoid() {
               alt={"Manufacturing Icon"}
               width={56}
               height={56}
+              priority
             />
           </span>
           <div className="flex flex-col">
@@ -47,6 +48,7 @@ export default function WhyArecoid() {
               alt={"Manufacturing Icon"}
               width={56}
               height={56}
+              priority
             />
           </span>
           <div className="flex flex-col">
@@ -67,6 +69,7 @@ export default function WhyArecoid() {
               alt={"Manufacturing Icon"}
               width={56}
               height={56}
+              priority
             />
           </span>
           <div className="flex flex-col">
@@ -87,6 +90,7 @@ export default function WhyArecoid() {
               alt={"Manufacturing Icon"}
               width={56}
               height={56}
+              priority
             />
           </span>
           <div className="flex flex-col">
