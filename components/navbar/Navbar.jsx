@@ -9,7 +9,7 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function Navbar() {
   return (
-    <nav className="flex mx-6 md:mx-8 xl:mx-16 justify-between items-center">
+    <nav className="flex px-6 md:px-8 xl:px-16 justify-between items-center bg-arecoidPrimary sticky top-0 z-10">
       <span className="flex py-3">
         <Image
           src="/nav/arecoid_logo.png"

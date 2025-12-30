@@ -1,9 +1,10 @@
-import { Hero } from "@/components";
+import { Hero, WhyArecoid } from "@/components";
 
-export default function Home(){
+export default function Home() {
   return (
     <main>
       <Hero />
+      <WhyArecoid />
     </main>
-  )
+  );
 }
