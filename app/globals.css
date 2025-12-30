@@ -4,4 +4,16 @@
   --color-arecoidPrimary: #fff3e4;
   --color-arecoidGreen: #3a7d1d;
   --color-arecoidBrown: #694a38;
+  --color-arecoidCream: #faeddb;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

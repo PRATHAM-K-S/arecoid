@@ -13,14 +13,14 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function WhyArecoid() {
   return (
-    <section className="mx-6 py-16 flex flex-col gap-8 sm:mx-8 xl:mx-16">
+    <section className="mx-6 pt-16 flex flex-col gap-8 sm:mx-8 xl:mx-16">
       <h2
         className={`${leagueSpartan.className} text-arecoidGreen font-bold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
       >
         Why Arecoid?
       </h2>
       <div className="grid grid-flow-row-dense grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-4">
-        <div className="flex gap-4 items-center bg-[#faeddb] px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
+        <div className="flex gap-4 items-center bg-arecoidCream px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
           <span className="aspect-square relative">
             <Image
               src={"/whyArecoid/manufacture.png"}
@@ -40,7 +40,7 @@ export default function WhyArecoid() {
             </p>
           </div>
         </div>
-        <div className="flex gap-4 items-center bg-[#faeddb] px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
+        <div className="flex gap-4 items-center bg-arecoidCream px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
           <span className="aspect-square relative">
             <Image
               src={"/whyArecoid/chemical-free.png"}
@@ -60,7 +60,7 @@ export default function WhyArecoid() {
             </p>
           </div>
         </div>
-        <div className="flex gap-4 items-center bg-[#faeddb] px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
+        <div className="flex gap-4 items-center bg-arecoidCream px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
           <span className="aspect-square relative">
             <Image
               src={"/whyArecoid/dishes.png"}
@@ -80,7 +80,7 @@ export default function WhyArecoid() {
             </p>
           </div>
         </div>
-        <div className="flex gap-4 items-center  bg-[#faeddb] px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
+        <div className="flex gap-4 items-center  bg-arecoidCream px-6 py-10 sm:py-12 sm:px-8 xl:py-16 xl:px-10 rounded-lg">
           <span className="aspect-square relative">
             <Image
               src={"/whyArecoid/reliability.png"}
