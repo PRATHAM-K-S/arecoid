@@ -1,4 +1,4 @@
-import { Hero, Manufacturing, ProductRange, WhyArecoid } from "@/components";
+import { ExportQuote, Hero, Manufacturing, ProductRange, WhyArecoid } from "@/components";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <WhyArecoid />
       <ProductRange />
       <Manufacturing />
+      <ExportQuote/>
     </main>
   );
 }

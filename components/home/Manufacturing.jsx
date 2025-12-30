@@ -8,7 +8,7 @@ const leagueSpartan = League_Spartan({
 
 export default function Manufacturing() {
   return (
-    <section className="mx-6 py-16 flex flex-col sm:mx-8 xl:mx-16">
+    <section className="mx-6 pt-16 flex flex-col sm:mx-8 xl:mx-16">
       <h2
         className={`${leagueSpartan.className} text-arecoidGreen font-bold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
       >
