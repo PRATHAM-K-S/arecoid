@@ -39,13 +39,13 @@ export default function Footer() {
               className={`${atkinsonHyperlegible.className} text-[14px] text-arecoidBrown space-y-2`}
             >
               <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/products">Products</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
               </li>
               <li>
                 <Link href="/manufacturing">Manufacturing</Link>
