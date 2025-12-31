@@ -25,16 +25,16 @@ export default function Navbar() {
         <Link href={"/"} className="px-2.5 py-3">
           Home
         </Link>
-        <Link href={"/"} className="px-2.5 py-3">
+        <Link href={"/about"} className="px-2.5 py-3">
           About Us
         </Link>
-        <Link href={"/"} className="px-2.5 py-3">
+        <Link href={"/products"} className="px-2.5 py-3">
           Products
         </Link>
-        <Link href={"/"} className="px-2.5 py-3">
+        <Link href={"/manufacturing"} className="px-2.5 py-3">
           Manufacturing
         </Link>
-        <Link href={"/"} className="px-2.5 py-3">
+        <Link href={"/contact"} className="px-2.5 py-3">
           Contact Us
         </Link>
       </div>

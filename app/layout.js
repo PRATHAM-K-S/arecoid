@@ -1,21 +1,23 @@
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 import "./globals.css";
 
+// app/layout.js or app/page.js
 export const metadata = {
-  title: {
-    default: "Arecoid - Eco-friendly Areca Leaf Dinnerware Manufacturer in India",
-    template:" %s | Arecoid",
-  },
+  title: "Arecoid | Areca Leaf Dinnerware Manufacturer in India",
   description:
-    "Arecoid: Leading manufacturer of sustainable Areca leaf dinnerware in India. Premium, 100% natural and compostable plates for eco-dining.",
+    "Arecoid is a leading manufacturer of sustainable Areca leaf plates in India. We provide 100% natural, compostable, and eco-friendly dinnerware solutions.",
+  alternates: {
+    canonical: "https://arecoid.in",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-arecoidPrimary">
+      <body className="bg-arecoidPrimary h-screen flex flex-col justify-between">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
