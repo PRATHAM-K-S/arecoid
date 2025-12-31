@@ -2,7 +2,10 @@ import { Navbar } from "@/components";
 import "./globals.css";
 
 export const metadata = {
-  title: "Arecoid | Premium Areca Leaf Plates & Biodegradable Tableware",
+  title: {
+    default: "Arecoid - Eco-friendly Areca Leaf Dinnerware Manufacturer in India",
+    template:" %s | Arecoid",
+  },
   description:
     "Arecoid: Leading manufacturer of sustainable Areca leaf dinnerware in India. Premium, 100% natural and compostable plates for eco-dining.",
 };
