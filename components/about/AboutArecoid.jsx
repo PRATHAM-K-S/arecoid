@@ -13,23 +13,25 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function AboutArecoid() {
   return (
-    <section className="flex flex-col mx-6 gap-6">
-      <div className="space-y-2">
+    <section className="flex flex-col gap-4 xl:flex-row xl:justify-between xl:items-center">
+      <div className="flex flex-col gap-4">
         <h1
-          className={`${leagueSpartan.className} text-4xl text-arecoidGreen leading-11 font-bold`}
+          className={`${leagueSpartan.className} text-4xl leading-11 md:text-[44px] md:leading-13 xl:text-[52px] xl:leading-16 font-bold text-arecoidGreen`}
         >
           About Arecoid
         </h1>
-        <p className={`${atkinsonHyperlegible.className} leading-6 text-arecoidBrown w-3/4 `}>
-          An export-focused areca leaf dinnerware manufacturer from India
+        <p
+          className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown`}
+        >
+          An export-focused areca leaf dinnerware brand from India
         </p>
       </div>
-      <div className="relative aspect-video">
+      <div className="relative aspect-video xl:aspect-square rounded-lg overflow-clip xl:w-1/2">
         <Image
           src={"/about/aboutHero.png"}
-          alt={"areca leaf plates"}
+          alt={"Employees working inside an areca leaf dinnerware industry"}
           fill
-          className="object-cover rounded-lg"
+          className="object-cover"
         />
       </div>
     </section>

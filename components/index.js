@@ -11,7 +11,7 @@ export { default as AboutArecoid } from "./about/AboutArecoid";
 export { default as WhoWeAre } from "./about/WhoWeAre";
 export { default as ManufacturingCapablities } from "./about/ManufacturingCapablities";
 export { default as Sustainability } from "./about/Sustainability";
-export { default as WhyArecoidAbout } from "./about/WhyArecoidAbout";
+export { default as WhyChooseArecoid } from "./about/WhyChooseArecoid";
 export { default as SoftCta } from "./about/SoftCta";
 
 export { default as ProductCard } from "./comps/ProductCard";

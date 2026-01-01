@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
+import Image from "next/image";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -13,23 +13,25 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function ManufacturingCapablities() {
   return (
-    <section className="flex flex-col mx-6 gap-6">
-      <h2
-        className={`${leagueSpartan.className} text-[32px] leading-10 font-semibold text-arecoidGreen`}
-      >
-        Manufacturing Capablities
-      </h2>
-      <div className="relative aspect-video">
+    <section className="grid gap-4 xl:grid-cols-2 items-center">
+      <div>
+        <h2
+          className={`${leagueSpartan.className} text-arecoidGreen font-semibold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
+        >
+          Manufacturing Capablities
+        </h2>
+      </div>
+      <div className="relative aspect-video rounded-lg overflow-clip xl:row-end-3 xl:row-start-1 xl:col-start-2">
         <Image
           src={"/about/hydraulicMachines.png"}
-          alt={"areca leaf plates"}
+          alt={"Employees working inside an areca leaf dinnerware industry"}
           fill
-          className="object-cover rounded-lg"
+          className="object-cover"
         />
       </div>
-      <div>
+      <div className="xl:row-start-2">
         <p
-          className={`${atkinsonHyperlegible.className} leading-6 text-arecoidBrown`}
+          className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown`}
         >
           Our products are manufactured in-house using carefully selected areca
           palm leaves and modern hydraulic pressing technology.
@@ -39,13 +41,11 @@ export default function ManufacturingCapablities() {
           inspection to ensure durability, hygiene, and consistency.
           <br />
           <br />
-        </p>
-        <p
-          className={`${atkinsonHyperlegible.className} leading-6 text-arecoidBrown`}
-        >
           Production capacity:
         </p>
-        <ul className={`${atkinsonHyperlegible.className} list-disc list-inside leading-6 text-arecoidBrown mt-2`}>
+        <ul
+          className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown list-disc list-inside space-y-2 mt-3`}
+        >
           <li>Up to 1,00,000 plates per month</li>
           <li>Scalable for bulk and container-level export orders</li>
         </ul>

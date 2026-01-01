@@ -9,7 +9,7 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 export default function WhyArecoidCard({ src, alt, text }) {
   return (
     <div className="flex items-center gap-4">
-      <Image src={src} alt={alt} width={32} height={32} />
+      <Image src={src} alt={alt} width={32} height={32}/>
       <p className={`${atkinsonHyperlegible.className} text-lg leading-7 text-arecoidBrown`}>{text}</p>
     </div>
   );

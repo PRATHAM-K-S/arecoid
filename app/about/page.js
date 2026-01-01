@@ -1,14 +1,21 @@
-import { AboutArecoid, ManufacturingCapablities, SoftCta, Sustainability, WhoWeAre, WhyArecoidAbout } from "@/components";
+import {
+  AboutArecoid,
+  ManufacturingCapablities,
+  SoftCta,
+  Sustainability,
+  WhoWeAre,
+  WhyChooseArecoid,
+} from "@/components";
 
 export default function About() {
   return (
-    <main className="py-4 pb-8 flex flex-col gap-12">
+    <main className="py-4 pb-8 flex flex-col gap-12 xl:gap-24 mx-6 sm:mx-8 xl:mx-16">
       <AboutArecoid />
-      <WhoWeAre/>
-      <ManufacturingCapablities/>
-      <Sustainability/>
-      <WhyArecoidAbout/>
-      <SoftCta/>
+      <WhoWeAre />
+      <ManufacturingCapablities />
+      <Sustainability />
+      <WhyChooseArecoid />
+      <SoftCta />
     </main>
   );
 }
