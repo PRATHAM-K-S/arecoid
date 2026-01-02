@@ -19,7 +19,7 @@ export default function ExportQuote() {
         Looking for a Reliable Areca Leaf Dinnerware Exporter?
       </h2>
       <ul
-        className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown xl:w-3/4 list-disc list-inside flex flex-col sm:flex-row gap-4`}
+        className={`${atkinsonHyperlegible.className} text-[16px] leading-6 text-arecoidBrown xl:w-full list-disc list-inside flex flex-col sm:flex-row gap-4`}
       >
         <li>Bulk Manufacturing</li>
         <li>Consistent Quality</li>

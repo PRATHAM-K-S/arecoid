@@ -31,36 +31,40 @@ export default function Navbar() {
       <div
         className={`${atkinsonHyperlegible.className} ${
           isMenuOpen
-            ? "flex justify-center absolute bg-arecoidPrimary w-full py-4 top-16"
+            ? "flex justify-center absolute bg-arecoidPrimary w-full py-4 top-16 "
             : "hidden xl:flex"
         } flex-col col-span-2 place-self-center place-items-center xl:col-span-1 xl:flex-row text-arecoidBrown text-lg gap-1 xl:place-self-end`}
       >
-        <Link onClick={handleMenuToggle} href={"/"} className="px-2.5 py-3">
+        <Link
+          onClick={() => setisMenuOpen(false)}
+          href={"/"}
+          className="px-2.5 py-3"
+        >
           Home
         </Link>
         <Link
-          onClick={handleMenuToggle}
+          onClick={() => setisMenuOpen(false)}
           href={"/about"}
           className="px-2.5 py-3"
         >
           About Us
         </Link>
         <Link
-          onClick={handleMenuToggle}
+          onClick={() => setisMenuOpen(false)}
           href={"/products"}
           className="px-2.5 py-3"
         >
           Products
         </Link>
         <Link
-          onClick={handleMenuToggle}
+          onClick={() => setisMenuOpen(false)}
           href={"/manufacturing"}
           className="px-2.5 py-3"
         >
           Manufacturing
         </Link>
         <Link
-          onClick={handleMenuToggle}
+          onClick={() => setisMenuOpen(false)}
           href={"/contact"}
           className="px-2.5 py-3"
         >
