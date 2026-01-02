@@ -12,7 +12,7 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function SoftCta() {
   return (
-    <section className="flex flex-col gap-6 pb-8">
+    <section className="flex flex-col gap-6">
       <h2
         className={`${leagueSpartan.className} text-arecoidGreen font-bold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
       >
