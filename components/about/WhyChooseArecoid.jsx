@@ -1,5 +1,5 @@
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
-import { WhyArecoidCard } from "..";
+import { WhyChooseArecoidCard } from "..";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -20,27 +20,27 @@ export default function WhyChooseArecoid() {
         Why Arecoid
       </h2>
       <div className="flex flex-col gap-4">
-        <WhyArecoidCard
+        <WhyChooseArecoidCard
           src={"/about/icons/manufacturing_light.png"}
           alt={"manufacturing icon"}
           text={"Manufacturer, not trader"}
         />
-        <WhyArecoidCard
+        <WhyChooseArecoidCard
           src={"/about/icons/process.png"}
           alt={"process icon"}
           text={"Export-focused processes"}
         />
-        <WhyArecoidCard
+        <WhyChooseArecoidCard
           src={"/about/icons/size.png"}
           alt={"scale icon"}
           text={"Consistent product sizing & quality"}
         />
-        <WhyArecoidCard
+        <WhyChooseArecoidCard
           src={"/about/icons/readiness.png"}
           alt={"readiness icon"}
           text={"Bulk & container shipment readiness"}
         />
-        <WhyArecoidCard
+        <WhyChooseArecoidCard
           src={"/about/icons/communication.png"}
           alt={"communication icon"}
           text={"Transparent communication"}

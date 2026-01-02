@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-arecoidPrimary h-screen flex flex-col justify-between">
+      <body className="bg-arecoidPrimary xl:h-screen flex flex-col justify-between">
         <Navbar />
         {children}
         <Footer />

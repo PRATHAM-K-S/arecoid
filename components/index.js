@@ -14,5 +14,6 @@ export { default as Sustainability } from "./about/Sustainability";
 export { default as WhyChooseArecoid } from "./about/WhyChooseArecoid";
 export { default as SoftCta } from "./about/SoftCta";
 
+export {default as WhyArecoidCard} from "./comps/WhyArecoidCard"
 export { default as ProductCard } from "./comps/ProductCard";
-export { default as WhyArecoidCard } from "./comps/WhyArecoidCard";
+export { default as WhyChooseArecoidCard } from "./comps/WhyChooseArecoidCard";
