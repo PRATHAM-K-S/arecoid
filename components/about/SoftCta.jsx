@@ -12,7 +12,7 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function SoftCta() {
   return (
-    <section className="flex flex-col gap-6">
+    <section className="flex flex-col gap-6 pb-8">
       <h2
         className={`${leagueSpartan.className} text-arecoidGreen font-bold text-[32px] leading-10 sm:text-4xl sm:leading-11 xl:text-[40px] xl:leading-13`}
       >
@@ -27,11 +27,11 @@ export default function SoftCta() {
         partnerships with consistent quality and transparent communication.
         Production capacity:
       </p>
-              <button
-          className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3 max-w-fit`}
-        >
-          Contact Us
-        </button>
+      <button
+        className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3 max-w-fit`}
+      >
+        Contact Us
+      </button>
     </section>
   );
 }

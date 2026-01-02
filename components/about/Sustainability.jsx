@@ -21,7 +21,7 @@ export default function Sustainability() {
           Sustainability at the Core
         </h2>
       </div>
-      <div className="relative aspect-video rounded-lg overflow-clip xl:row-end-3 xl:row-start-1 xl:col-start-2">
+      <div className="relative aspect-video xl:aspect-square xl:w-3/4 xl:place-self-end rounded-lg overflow-clip xl:row-end-3 xl:row-start-1 xl:col-start-2">
         <Image
           src={"/about/sustainability.png"}
           alt={"Employees working inside an areca leaf dinnerware industry"}
