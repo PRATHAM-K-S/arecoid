@@ -5,6 +5,9 @@ import { ContactInput, ContactTextArea } from "..";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import z from "zod";
+import { contactFormSchema } from "@/app/utils/zodSchemas";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -23,7 +26,17 @@ export default function Contact() {
     register,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      full_name: "",
+      company: "",
+      country: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
 
   const handleOnSubmit = async (data) => {
     setLoading(true);
@@ -122,10 +135,10 @@ export default function Contact() {
           errors={errors}
         />
         <ContactTextArea
-        label={"Message"}
-        placeholder={"Write your message here..."}
-        name={"message"}
-        register={register}
+          label={"Message"}
+          placeholder={"Write your message here..."}
+          name={"message"}
+          register={register}
         />
         <button
           disabled={loading}

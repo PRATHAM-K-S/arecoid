@@ -32,7 +32,7 @@ export default function ContactInput({
         <span
           className={`${atkinsonHyperlegible.className}  text-red-500 text-xs italic`}
         >
-          {label} is required
+          {errors[name]?.message}
         </span>
       )}
     </div>

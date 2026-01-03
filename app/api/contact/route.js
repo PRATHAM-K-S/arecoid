@@ -1,3 +1,4 @@
+import { contactFormSchema } from "@/app/utils/zodSchemas";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -5,8 +6,28 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const { full_name, company, country, email, phone, message } =
-      await request.json();
+    const body = await request.json();
+
+    // 1. VALIDATE THE DATA
+    const validation = contactFormSchema.safeParse(body);
+
+    if (!validation.success) {
+      // Return 400 Bad Request with the specific Zod errors
+      return NextResponse.json(
+        {
+          error: "Validation Failed",
+          details: validation.error.issues.map((issue) => ({
+            field: issue.path[0],
+            message: issue.message,
+          })),
+        },
+        { status: 400 }
+      );
+    }
+
+    // 2. IF VALID, PROCEED TO SEND EMAIL
+    const { full_name, email, message, company, country, phone } =
+      validation.data;
 
     const { data, error } = await resend.emails.send({
       from: "Arecoid System <system@arecoid.in>",
