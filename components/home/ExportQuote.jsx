@@ -1,4 +1,5 @@
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
+import Link from "next/link";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -25,18 +26,12 @@ export default function ExportQuote() {
         <li>Consistent Quality</li>
         <li>Export-Ready Documentation</li>
       </ul>
-      <div className="flex gap-4">
-        <button
-          className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3 cursor-pointer`}
-        >
-          Get Export Quote
-        </button>
-        <button
-          className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidGreen border border-arecoidGreen py-3.5 px-6 rounded-lg mt-3 cursor-pointer`}
-        >
-          Request Samples
-        </button>
-      </div>
+      <Link
+      href={'/contact'}
+        className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3 cursor-pointer w-fit`}
+      >
+        Get Export Quote
+      </Link>
     </section>
   );
 }

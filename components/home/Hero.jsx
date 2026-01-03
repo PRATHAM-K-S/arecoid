@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
+import Link from "next/link";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -35,11 +36,12 @@ export default function Hero() {
           Arecoid, a unit of Parashakthi Industries, specializes in eco-friendly
           areca leaf dinnerware for export and domestic markets.
         </p>
-        <button
+        <Link
+          href={"/contact"}
           className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3`}
         >
           Contact for export enquires
-        </button>
+        </Link>
       </div>
     </section>
   );

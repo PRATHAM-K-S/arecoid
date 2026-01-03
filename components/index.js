@@ -14,6 +14,11 @@ export { default as Sustainability } from "./about/Sustainability";
 export { default as WhyChooseArecoid } from "./about/WhyChooseArecoid";
 export { default as SoftCta } from "./about/SoftCta";
 
-export {default as WhyArecoidCard} from "./comps/WhyArecoidCard"
+export { default as Contact } from "./contact/Contact";
+export { default as ContactTextArea } from "./comps/ContactTextArea";
+export { default as ResponseMail } from "./contact/ResponseEmail";
+
+export { default as WhyArecoidCard } from "./comps/WhyArecoidCard";
 export { default as ProductCard } from "./comps/ProductCard";
 export { default as WhyChooseArecoidCard } from "./comps/WhyChooseArecoidCard";
+export { default as ContactInput } from "./comps/ContactInput";

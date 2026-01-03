@@ -1,4 +1,5 @@
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
+import Link from "next/link";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -27,11 +28,12 @@ export default function SoftCta() {
         partnerships with consistent quality and transparent communication.
         Production capacity:
       </p>
-      <button
+      <Link
+        href={"/contact"}
         className={`${atkinsonHyperlegible.className} text-sm leading-5 text-arecoidPrimary bg-arecoidGreen py-3.5 px-6 rounded-lg mt-3 max-w-fit`}
       >
         Contact Us
-      </button>
+      </Link>
     </section>
   );
 }
