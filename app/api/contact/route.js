@@ -5,13 +5,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const { full_name,company,country, email, phone, message } = await request.json();
+    const { full_name, company, country, email, phone, message } =
+      await request.json();
 
-    // Send email to Admin
     const { data, error } = await resend.emails.send({
-      from: "Arecoid System <system@arecoid.in>", // Must be verified in Resend
+      from: "Arecoid System <system@arecoid.in>",
       to: "sales@arecoid.in",
-      reply_to: email, // This lets you reply directly to the customer
+      reply_to: email,
       subject: `New Inquiry: ${full_name}`,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5; color: #333;">

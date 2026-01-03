@@ -8,18 +8,12 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 export default function ContactInput({
   label,
   name,
-  value,
   placeholder,
   type = "text",
-  required=true,
-  formData,
-  setFormData
+  required = true,
+  register,
+  errors,
 }) {
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="flex flex-col gap-2">
       <label
@@ -28,14 +22,19 @@ export default function ContactInput({
         {label}
       </label>
       <input
-        required={required}
-        name={name}
-        value={value}
-        onChange={handleChange}
+        // register handles value and onChange internally
+        {...register(name, { required: required })}
         placeholder={placeholder}
         type={type}
-        className={`${atkinsonHyperlegible.className} text-sm leading-5  border border-arecoidBrown p-3 py-4  rounded-lg outline-arecoidBrown text-arecoidBrown`}
+        className={`${atkinsonHyperlegible.className} text-sm leading-5 border border-arecoidBrown p-3 py-4 rounded-lg outline-arecoidBrown outline-none focus:border-2 text-arecoidBrown ${errors[name] ? "border-red-500" : ""}`}
       />
+      {errors[name] && (
+        <span
+          className={`${atkinsonHyperlegible.className}  text-red-500 text-xs italic`}
+        >
+          {label} is required
+        </span>
+      )}
     </div>
   );
 }

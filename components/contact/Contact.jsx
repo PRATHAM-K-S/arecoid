@@ -3,6 +3,8 @@
 import { League_Spartan, Atkinson_Hyperlegible } from "next/font/google";
 import { ContactInput, ContactTextArea } from "..";
 import { useState } from "react";
+import { toast } from "sonner";
+import { useForm } from "react-hook-form";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -16,43 +18,31 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    full_name: "",
-    company: "",
-    country: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleOnSubmit = async (data) => {
     setLoading(true);
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data), // Send the 'data' from useForm
       });
 
-      const result = await response.json();
-
       if (response.ok) {
-        alert("Thank you! Your inquiry has been sent to sales@arecoid.in");
-        setFormData({
-          full_name: "",
-          company: "",
-          country: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
+        toast.success("Inquiry sent to sales@arecoid.in");
+        reset(); // Clears the form fields
       } else {
-        alert("Error: " + result.error.message);
+        toast.error("Failed to send message.");
       }
     } catch (error) {
-      alert("Something went wrong. Please try again later.");
+      toast.error("An error occurred.");
     } finally {
       setLoading(false);
     }
@@ -91,55 +81,51 @@ export default function Contact() {
           </p>
         </div>
       </div>
-      <form onSubmit={handleSubmit} className=" xl:w-1/2 flex flex-col gap-4">
+      <form
+        onSubmit={handleSubmit(handleOnSubmit)}
+        className=" xl:w-1/2 flex flex-col gap-4"
+      >
         <ContactInput
-          label="Full Name*"
+          label="Full Name"
           name="full_name"
           placeholder={"e.g., Mike Shinoda"}
-          value={formData.full_name}
-          formData={formData}
-          setFormData={setFormData}
+          register={register}
+          errors={errors}
         />
         <ContactInput
-          label="Company Name*"
+          label="Company Name"
           name="company"
           placeholder={"e.g., Acme Corp"}
-          value={formData.company}
-          formData={formData}
-          setFormData={setFormData}
+          register={register}
+          errors={errors}
         />
         <ContactInput
-          label="Country/Region*"
+          label="Country/Region"
           name="country"
           placeholder={"e.g., United States"}
-          value={formData.country}
-          formData={formData}
-          setFormData={setFormData}
+          register={register}
+          errors={errors}
         />
         <ContactInput
-          label="Email*"
+          label="Email"
           name="email"
           placeholder={"e.g., name@company.com"}
-          value={formData.email}
-          formData={formData}
-          setFormData={setFormData}
+          register={register}
+          errors={errors}
         />
         <ContactInput
           label="Phone Number"
           name="phone"
           placeholder={"e.g., +44 1234 567890"}
-          value={formData.phone}
-          formData={formData}
-          setFormData={setFormData}
           required={false}
+          register={register}
+          errors={errors}
         />
         <ContactTextArea
-          label={"Message"}
-          name={"message"}
-          value={formData.message}
-          placeholder={"Tell us about your requirements..."}
-          formData={formData}
-          setFormData={setFormData}
+        label={"Message"}
+        placeholder={"Write your message here..."}
+        name={"message"}
+        register={register}
         />
         <button
           disabled={loading}

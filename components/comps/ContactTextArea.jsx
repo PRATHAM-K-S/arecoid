@@ -8,15 +8,9 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible({
 export default function ContactTextArea({
   label,
   name,
-  value,
   placeholder,
-  formData,
-  setFormData,
+  register,
 }) {
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="flex flex-col gap-2">
       <label
@@ -25,10 +19,9 @@ export default function ContactTextArea({
         {label}
       </label>
       <textarea
+        {...register(name)}
         name={name}
         rows={5}
-        value={value}
-        onChange={handleChange}
         placeholder={placeholder}
         className={`${atkinsonHyperlegible.className} text-sm leading-5  border border-arecoidBrown p-3 rounded-lg outline-arecoidBrown text-arecoidBrown`}
       />

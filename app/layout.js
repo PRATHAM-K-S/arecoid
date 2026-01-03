@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "@/components";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 // app/layout.js or app/page.js
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className="bg-arecoidPrimary xl:h-screen flex flex-col justify-between">
         <Navbar />
         {children}
+        <Toaster richColors closeButton position="top-center" />
         <Footer />
       </body>
     </html>
