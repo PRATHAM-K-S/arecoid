@@ -22,4 +22,5 @@ export const contactFormSchema = z.object({
     .string()
     .max(1000, "Message must be at most 1000 characters long")
     .optional(),
+  fax_number: z.string().optional(),
 });

@@ -35,6 +35,7 @@ export default function Contact() {
       email: "",
       phone: "",
       message: "",
+      fax_number: "",
     },
   });
 
@@ -139,6 +140,13 @@ export default function Contact() {
           placeholder={"Write your message here..."}
           name={"message"}
           register={register}
+        />
+        <input
+          type="text"
+          {...register("fax_number")}
+          tabIndex="-1"
+          autoComplete="off"
+          className="hidden"
         />
         <button
           disabled={loading}

@@ -8,11 +8,20 @@ export async function POST(request) {
   try {
     const body = await request.json();
 
-    // 1. VALIDATE THE DATA
+    // 1. HONEYPOT CHECK
+    // Use .trim() to catch bots sending whitespace
+    if (body.fax_number && body.fax_number.trim().length > 0) {
+      // Return the EXACT same message as a real success
+      return NextResponse.json(
+        { message: "Email sent successfully" },
+        { status: 200 }
+      );
+    }
+
+    // 2. ZOD VALIDATION
     const validation = contactFormSchema.safeParse(body);
 
     if (!validation.success) {
-      // Return 400 Bad Request with the specific Zod errors
       return NextResponse.json(
         {
           error: "Validation Failed",
@@ -25,7 +34,7 @@ export async function POST(request) {
       );
     }
 
-    // 2. IF VALID, PROCEED TO SEND EMAIL
+    // 3. SEND EMAIL
     const { full_name, email, message, company, country, phone } =
       validation.data;
 
@@ -60,6 +69,11 @@ export async function POST(request) {
       { status: 200 }
     );
   } catch (err) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    // Log the actual error for you, but send a clean message to the user
+    console.error("API Error:", err);
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }
